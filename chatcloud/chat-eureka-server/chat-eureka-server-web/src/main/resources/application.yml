@@ -1,0 +1,27 @@
+#SERVER
+server:
+  port: 8600
+#
+##SPRING
+#spring:
+#  application:
+#    name: chat-eureka-server
+#  http:
+#    encoding:
+#      charset: utf-8
+#      enabled: true
+#      force: true
+#    multipart:
+#      maxFileSize: 3Mb
+#      maxRequestSize: 3Mb
+#  session:
+#    store-type: none
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
